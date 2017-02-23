@@ -31,3 +31,24 @@ id | name |
 # Restaurant#owner
 # Review#customer
 # Review#restaurant
+
+#reviews
+#reviews belong to one restaurant
+id | review | restaurant_id
+
+#restaurants
+#restaurants belong to one owner
+id | name | owner_id
+
+#owners
+#one owner can have many restaurants
+id | name
+
+#customers
+#a customer can have many reviews and many restaurants through reviews
+id | name
+
+#customers_reviews
+#join table for the many_through_many relationship
+#of customers to restaurants
+customer_id | review_id
