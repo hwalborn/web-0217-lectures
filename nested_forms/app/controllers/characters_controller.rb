@@ -16,6 +16,14 @@ class CharactersController < ApplicationController
   post '/characters' do
     @character = Character.create(params)
     redirect to "/characters/#{@character.id}"
+
+  end
+
+  get('/characters') do
+    @characters = Character.all
+    erb(:'characters/index')
+    #
+
   end
 
 end
