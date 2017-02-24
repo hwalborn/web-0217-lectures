@@ -4,18 +4,20 @@
     <meta charset="utf-8">
     <title>Create Character. Bitches</title>
   </head>
-  <body>
-    <form action="/characters" method="post">
-      <input type="text" name="name" placeholder="Character Name">
-      <br></br>
-      <input type="submit" value="Make New">
-    </form>
-  </body>
-</html>
-
+<!--
 <form action="/characters" method="POST">
   <label for="">character name</label>
-  <input type="text" name="characer[name]">
+  <input type="text" name="character[name]">
+  <label for=""> Actor name </label>
+  <input type="text" name="character[actor][]">
+  <label for=""> Tv show name name </label>
+  <input type="text" name="character[tv_show_ids][]">
+  <input type="submit" value="create a character">
+</form>
+-->
+<form action="/characters" method="POST">
+  <label for="">character name</label>
+  <input type="text" name="character[name]">
   <label for=""> Actor name </label>
   <input type="text" name="actor[name]">
   <label for=""> Tv show name name </label>

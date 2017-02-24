@@ -14,7 +14,12 @@ class CharactersController < ApplicationController
   end
 
   post '/characters' do
-    @character = Character.create(params)
+    binding.pry
+    @character = Character.create(params["character"])
+    @character.actor = Actor.create(params["actor"])
+    @character.tv_show = TvShow.create(params["tv_show"])
+    @character.save
+    Character.create({character_attributes: {name: 'vega', actor_name: "travolta", tv_show_name: "pulp"}})
     redirect to "/characters/#{@character.id}"
 
   end

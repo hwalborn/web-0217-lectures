@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -10,12 +9,7 @@
   </head>
   <body>
     <h1><%= @character.name %></h1>
+    <h1><%= @character.actor.name %></h1>
+    <h1><%= @character.tv_show.name %></h1>
   </body>
 </html>
-=======
-Character: <%= @character.name %>
-
-<% @characters.each do |character| %>
-  <%= character.name %>
-<% end %>
->>>>>>> f7c559a570581ac6b6341ccab99621c53d90b3cc
